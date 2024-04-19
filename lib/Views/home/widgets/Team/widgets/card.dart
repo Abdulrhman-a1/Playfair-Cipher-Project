@@ -1,22 +1,14 @@
-
 import 'package:flutter/material.dart';
 
 class MemberCard extends StatelessWidget {
   const MemberCard({
     super.key,
-    required this.image,
-    required this.imageBackground,
     required this.name,
     required this.workDescription,
-    required this.badgeText,
-    required this.badgeColor,
   });
-  final String image;
-  final Color imageBackground;
+
   final String name;
   final String workDescription;
-  final String badgeText;
-  final Color badgeColor;
 
   @override
   Widget build(BuildContext context) {
@@ -67,21 +59,6 @@ class MemberCard extends StatelessWidget {
       boxShadow: _boxShadow,
     );
   }
-
-  // List<BoxShadow> get _imageShadow {
-  //   return [
-  //     const BoxShadow(
-  //       color: Colors.grey,
-  //       blurRadius: 12,
-  //       blurStyle: BlurStyle.outer,
-  //     ),
-  //     BoxShadow(
-  //       color: Colors.grey.withOpacity(1),
-  //       blurRadius: 12,
-  //       blurStyle: BlurStyle.solid,
-  //     ),
-  //   ];
-  // }
 
   List<BoxShadow> get _boxShadow {
     return [

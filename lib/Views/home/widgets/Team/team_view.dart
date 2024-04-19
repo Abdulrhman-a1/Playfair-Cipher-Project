@@ -2,13 +2,57 @@ import 'package:flutter/material.dart';
 import 'package:plaincipher/Views/home/widgets/Team/widgets/card.dart';
 
 class TeamView extends StatefulWidget {
-  const TeamView({super.key});
+  const TeamView({Key? key}) : super(key: key);
 
   @override
   State<TeamView> createState() => _TeamViewState();
 }
 
 class _TeamViewState extends State<TeamView> {
+  late List<MemberCard> cardsData;
+  List<MemberCard> memberCards = [];
+  bool isAnimationComplete = false;
+
+  @override
+  void initState() {
+    super.initState();
+    cardsData = [
+      MemberCard(
+        name: "Abdulrhman Albusaad",
+        workDescription: "Web page",
+      ),
+      MemberCard(
+        name: "",
+        workDescription: "",
+      ),
+      MemberCard(
+        name: "",
+        workDescription: "",
+      ),
+      MemberCard(
+        name: "",
+        workDescription: "",
+      ),
+    ];
+    _buildMemberCardsWithDelay(0);
+  }
+
+  void _buildMemberCardsWithDelay(int index) {
+    if (index >= cardsData.length) {
+      setState(() {
+        isAnimationComplete = true;
+      });
+      return;
+    }
+
+    Future.delayed(Duration(milliseconds: 150), () {
+      setState(() {
+        memberCards.add(cardsData[index]);
+      });
+      _buildMemberCardsWithDelay(index + 1);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -18,38 +62,13 @@ class _TeamViewState extends State<TeamView> {
           physics: const BouncingScrollPhysics(),
           padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 5),
           children: [
-            MemberCard(
-              name: "Abdulrhman Albusaad",
-              workDescription: "Web page",
-              image: 'assets/team/img1.png',
-              imageBackground: Colors.indigo[100]!,
-              badgeText: "Developer",
-              badgeColor: Colors.indigo[300]!,
-            ),
-            MemberCard(
-              name: "",
-              workDescription: "",
-              image: 'assets/team/img2.png',
-              imageBackground: Colors.lightGreen[200]!,
-              badgeText: "Developer",
-              badgeColor: Colors.lightGreenAccent[100]!,
-            ),
-            MemberCard(
-              name: "",
-              workDescription: "",
-              image: 'assets/team/img3.png',
-              imageBackground: Colors.deepOrangeAccent[200]!,
-              badgeText: "Developer",
-              badgeColor: Colors.deepOrangeAccent[100]!,
-            ),
-            MemberCard(
-              name: "",
-              workDescription: "",
-              image: 'assets/team/img4.png',
-              imageBackground: Colors.deepPurpleAccent[100]!,
-              badgeText: "Designer",
-              badgeColor: Colors.deepPurpleAccent[100]!,
-            ),
+            for (int i = 0; i < memberCards.length; i++)
+              AnimatedOpacity(
+                opacity: isAnimationComplete ? 1.0 : 0.0,
+                duration: Duration(milliseconds: 500),
+                curve: Curves.easeInOut,
+                child: memberCards[i],
+              ),
           ],
         ),
       ),

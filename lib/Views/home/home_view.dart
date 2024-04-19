@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plaincipher/Views/home/widgets/Centered_view/Centered_view.dart';
 import 'package:plaincipher/Views/home/widgets/CourseDetails/Course_details.dart';
+import 'package:plaincipher/Views/home/widgets/EnterPage/enter_page.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -28,15 +30,31 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        controller: _scrollController,
-        child: CenteredView(
-          child: Column(
-            children: [
-              CourseDetails(),
-            ],
+      body: ScrollTransformView(
+        children: [
+          ScrollTransformItem(
+            builder: ((scrollOffset) {
+              return CenteredView(
+                child: Column(
+                  children: [
+                    CourseDetails(),
+                  ],
+                ),
+              );
+            }),
           ),
-        ),
+          ScrollTransformItem(
+            builder: ((scrollOffset) {
+              return CenteredView(
+                child: Column(
+                  children: [
+                    EnterPage(),
+                  ],
+                ),
+              );
+            }),
+          )
+        ],
       ),
     );
   }
