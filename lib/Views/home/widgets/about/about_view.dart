@@ -26,6 +26,6 @@ class AboutView extends StatelessWidget {
         ],
       ),
     );
-    ;
+    
   }
 }

@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -69,20 +68,20 @@ class MemberCard extends StatelessWidget {
     );
   }
 
-  List<BoxShadow> get _imageShadow {
-    return [
-      const BoxShadow(
-        color: Colors.grey,
-        blurRadius: 12,
-        blurStyle: BlurStyle.outer,
-      ),
-      BoxShadow(
-        color: Colors.grey.withOpacity(1),
-        blurRadius: 12,
-        blurStyle: BlurStyle.solid,
-      ),
-    ];
-  }
+  // List<BoxShadow> get _imageShadow {
+  //   return [
+  //     const BoxShadow(
+  //       color: Colors.grey,
+  //       blurRadius: 12,
+  //       blurStyle: BlurStyle.outer,
+  //     ),
+  //     BoxShadow(
+  //       color: Colors.grey.withOpacity(1),
+  //       blurRadius: 12,
+  //       blurStyle: BlurStyle.solid,
+  //     ),
+  //   ];
+  // }
 
   List<BoxShadow> get _boxShadow {
     return [
