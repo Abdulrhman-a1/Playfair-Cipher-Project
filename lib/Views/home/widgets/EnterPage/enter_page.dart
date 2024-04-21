@@ -30,7 +30,7 @@ class EnterPage extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 500,
+          height: 800,
         )
       ],
     );

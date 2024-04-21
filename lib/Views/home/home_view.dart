@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plaincipher/Views/home/widgets/Centered_view/Centered_view.dart';
-import 'package:plaincipher/Views/home/widgets/CourseDetails/Course_details.dart';
+import 'package:plaincipher/Views/home/widgets/CourseDetails/home.dart';
 import 'package:plaincipher/Views/home/widgets/EnterPage/enter_page.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 

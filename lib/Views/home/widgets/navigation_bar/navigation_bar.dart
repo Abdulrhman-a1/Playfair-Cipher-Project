@@ -18,11 +18,11 @@ class TNavigationBar extends StatelessWidget {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
+                _NavBarItem(title: 'Home', navigationPath: HomeRoute),
+                SizedBox(width: 60),
                 _NavBarItem(title: 'Team', navigationPath: TeamRoute),
                 SizedBox(width: 60),
                 _NavBarItem(title: 'About', navigationPath: AboutRoute),
-                SizedBox(width: 60),
-                _NavBarItem(title: 'Home', navigationPath: HomeRoute),
               ],
             )
           ],
