@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:plaincipher/Views/home/widgets/ScrollDownArrow/ScrollDownArrow.dart';
 
 class CourseDetails extends StatelessWidget {
   const CourseDetails({super.key});
@@ -7,11 +6,13 @@ class CourseDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          width: 900,
+          color: Colors.transparent,
+          width: 700,
+          height: 500,
           child: Column(
+            verticalDirection: VerticalDirection.down,
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -29,11 +30,6 @@ class CourseDetails extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        Icon(
-          Icons.arrow_downward,
-          size: 36,
-          color: Colors.black,
         ),
       ],
     );

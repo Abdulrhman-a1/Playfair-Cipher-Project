@@ -9,7 +9,8 @@ class EnterPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          width: 600,
+          width: 700,
+          height: 500,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -29,9 +30,6 @@ class EnterPage extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
-          height: 800,
-        )
       ],
     );
   }

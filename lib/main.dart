@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:plaincipher/Views/home/widgets/layout/layout_template.dart';
+import 'package:plaincipher/Views/home/layout/layout_template.dart';
 import 'package:plaincipher/locator.dart';
 
 void main() {
