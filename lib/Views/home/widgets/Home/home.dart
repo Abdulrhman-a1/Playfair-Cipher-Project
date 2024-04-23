@@ -10,7 +10,7 @@ class CourseDetails extends StatelessWidget {
         Container(
           color: Colors.transparent,
           width: 700,
-          height: 500,
+          height: 300,
           child: Column(
             verticalDirection: VerticalDirection.down,
             crossAxisAlignment: CrossAxisAlignment.start,

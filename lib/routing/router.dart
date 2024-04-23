@@ -3,7 +3,7 @@ import 'package:plaincipher/routing/route_name.dart';
 
 import '../Views/home/home_view.dart';
 import '../Views/home/widgets/Team/team_view.dart';
-import '../Views/home/widgets/about/about_view.dart';
+import '../Views/home/widgets/AboutPage/about_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   print('generateRoute: ${settings.name}');
