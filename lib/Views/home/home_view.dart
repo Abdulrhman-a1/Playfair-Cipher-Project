@@ -56,7 +56,7 @@ class _HomeViewState extends State<HomeView> {
               );
             },
           ),
-          Center(child: EnterPage()),
+          EnterPage(),
           IconButton(
             icon: Icon(Icons.arrow_upward, size: 40),
             onPressed: () {
