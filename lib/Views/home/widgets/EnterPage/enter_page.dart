@@ -73,15 +73,15 @@ class _EnterPageState extends State<EnterPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Enter Your Key',
+                    'Enter Your Key and Plaintext',
                     style: TextStyle(
                         fontWeight: FontWeight.w800, fontSize: 60, height: 1.2),
                   ),
                   const SizedBox(height: 30),
-                  const Text(
-                    'A polygraphic substitution cipher that employs a 5x5 grid of letters for encryption, making it more resistant to frequency analysis compared to traditional ciphers. It uses digraphs, where pairs of letters are encrypted based on their positions within the grid.',
-                    style: TextStyle(fontSize: 21, height: 1.7),
-                  ),
+                  // const Text(
+                  //   'A polygraphic substitution cipher that employs a 5x5 grid of letters for encryption, making it more resistant to frequency analysis compared to traditional ciphers. It uses digraphs, where pairs of letters are encrypted based on their positions within the grid.',
+                  //   style: TextStyle(fontSize: 21, height: 1.7),
+                  // ),
                 ],
               ),
             ),
