@@ -1,5 +1,4 @@
 // ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -32,7 +31,9 @@ class AboutView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  _launchURL();
+                },
                 child: Text(
                   'Open the report',
                   style: TextStyle(color: Colors.black54),
@@ -43,5 +44,15 @@ class AboutView extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+_launchURL() async {
+  const url =
+      'https://abdulrhman-a1.github.io/PdfVeiwer/'; // Replace this with your URL
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }

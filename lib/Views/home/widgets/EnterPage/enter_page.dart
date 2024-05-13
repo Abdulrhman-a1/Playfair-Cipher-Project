@@ -317,12 +317,27 @@ class _EnterPageState extends State<EnterPage> {
         .toUpperCase()
         .replaceAll(RegExp(r'[^A-Z]'), '')
         .replaceAll('J', 'I');
-    if (text.length % 2 != 0) text += 'X'; // Padding for odd length
+
+    List<String> pairs = [];
+    for (int i = 0; i < text.length; i += 2) {
+      if (i + 1 < text.length) {
+        if (text[i] == text[i + 1]) {
+          pairs.add(text[i] + 'X');
+          i -=
+              1; // Adjust index to process next char in the new pair in next iteration
+        } else {
+          pairs.add(text.substring(i, i + 2));
+        }
+      } else {
+        pairs.add(text[i] + 'X');
+      }
+    }
 
     String result = '';
-    for (int i = 0; i < text.length; i += 2) {
-      String a = text[i], b = (i + 1 < text.length) ? text[i + 1] : 'X';
-      if (a == b) b = 'X';
+    for (String pair in pairs) {
+      String a = pair[0];
+      String b = pair[1];
+
       int aRow = 0, aCol = 0, bRow = 0, bCol = 0;
 
       for (int row = 0; row < 5; row++) {
@@ -359,6 +374,7 @@ class _EnterPageState extends State<EnterPage> {
         result += table[bRow][aCol];
       }
     }
+
     return result;
   }
 }
