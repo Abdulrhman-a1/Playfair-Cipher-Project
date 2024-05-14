@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plaincipher/Views/home/widgets/CourseDetails/home.dart';
+import 'package:plaincipher/Views/home/widgets/homedetils/home.dart';
 import 'package:plaincipher/Views/home/widgets/EnterPage/enter_page.dart';
 
 class HomeView extends StatefulWidget {

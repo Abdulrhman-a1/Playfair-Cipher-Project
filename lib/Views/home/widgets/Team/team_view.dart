@@ -19,18 +19,18 @@ class _TeamViewState extends State<TeamView> {
     cardsData = [
       MemberCard(
         name: "Abdulrhman Albusaad",
-        workDescription: "Web page",
-      ),
-      MemberCard(
-        name: "",
         workDescription: "",
       ),
       MemberCard(
-        name: "",
+        name: "Mahdi Alzakari",
         workDescription: "",
       ),
       MemberCard(
-        name: "",
+        name: "Mahdi Almutawa",
+        workDescription: "",
+      ),
+      MemberCard(
+        name: "Faris Alsalmi",
         workDescription: "",
       ),
     ];
